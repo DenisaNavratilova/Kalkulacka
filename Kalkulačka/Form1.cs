@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolBar;
 
+// verzovani masteru
 namespace Kalkulačka
 {
     public partial class Form1 : Form
