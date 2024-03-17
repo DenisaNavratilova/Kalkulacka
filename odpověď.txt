@@ -1,0 +1,20 @@
+Během odevzdání odpovězte na následující otázku:
+
+Testovací příklad je například 10/3*3. 
+Na primitivní kalkulačce je výsledkem 9.999999999, na vědeckém kalkulátoru je výsledkem opět přesných 10. 
+Jak musí program fungovat (jak se musí jeho fungování lišit od primitivní kalkulačky), 
+abychom docílili této přesnosti vědeckého kalkulátoru?
+--------------------------------------------------------------------------------------------------------
+
+Vědecká kalkulačka zaokrouhlí výsledek na nejbližší možné číslo, pokud by byl výsledek moc dlouhý na vypsání do textboxu.
+V tomto případě je 10 blíže matematickému výsledku (9.¯9), než např. jen číslo 9,999999999, které by kalkulačka zvládla vypsat.
+Vědecká kalkulačka si tedy správně ukládá/pamatuje číslo s periodou, pokud tomu tak je.
+
+Primitivní kalkulačka tedy jen vypočítá 10/3 a "mezivýsledek" si zapamatuje tak, jak ho vypsala (s omezeným počtem znaků).
+Tento určitý počet znaků pak jednoduše vynásobí 3 a vypíše výsledek 9,999999999.
+
+Pokud bude program schopný celý příklad vypočítat najednou a hodnotu si sám na pozadí uložit jako 3.¯3, výsledek pak musí být 10.
+Pokud program provádí operace postupně (např. 10/3 = 3,333333333 -což se nezaokoruhlí a následně 3,333333333 *3 ),
+výsledek bude závislý na vypsaném mezivýpočtu a bude 9,999999999.
+Prakticky musí program zvládnout počítat na pozadí a s více operátory a nepožadovat po každém jednoduchém výpočtu stisknutí "=",
+případně by si vypsaný mezivýpočet neměl brát jako vstup pro dokončení příkladu.
